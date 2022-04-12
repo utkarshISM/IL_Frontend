@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(196, 195, 195);
+}
+#top{
+    padding: 1rem;
+    background-color: grey;
+    font-size: 2rem;
+}
+.fas.fa-home{
+    text-decoration: none;
+}
+.form-container{
+    background-color:rgba(151, 151, 155, 0.479) ;
+    /* position: relative; */
+    color: whitesmoke;
+    /* padding: 1rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width:fit-content;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    /* width:70%;
+    align-items: center; */
+}
+.form-container::before{
+    content:'';
+    position: absolute;
+    width: 180px;
+    height: 150%;
+    background: linear-gradient(rgb(44, 43, 43),#fff);
+    animation: animate 8s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form-container::after{
+    content:'';
+    position: absolute;
+    background-color: rgba(151, 151, 155);
+    inset:4px;
+    border-radius: 0.9rem;
+}
+
+
+
+/* 
+.form{
+    font-size: 1rem;
+    color: rgb(234, 228, 236);
+    display: block;
+    justify-content: space-around;
+} */
+/* .form.message{
+    box-sizing: border-box;
+    width: 40%;
+    min-height:400px;
+    max-height: fit-content;
+} */
+/* .form-container{
+    align-items: center;
+} */
+
+.form{
+    margin: 2rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    border-style: none;
+    z-index: 100;
+}
+input{
+    padding: 0.2rem ;
+    object-fit: cover;
+    margin:1rem;
+    background-color: inherit;
+    border-color: rgb(100, 100, 100);
+    font-size:20px;
+    color:cyan;
+    border-style: none;
+    border-bottom-style:solid;
+}
+textarea{
+    padding: 0.2rem ;
+    /* object-fit: cover; */
+    margin:1rem 0;
+    background-color: inherit;
+    border-color: rgb(100, 100, 100);
+    font-size:20px;
+    color:cyan;
+    border-style: none;
+    border-bottom-style:solid;
+    /* min-height:4rem;
+    min-width:300px; */
+    /* max-width: 15rem; */
+    max-height:15rem;
+ 
+}
+h1{
+    font-size: 300%;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+    text-align: center;
+    text-decoration: wavy;
+}
+#btn{
+    border-radius: 10px;
+    background-color: rgb(155, 155, 155);
+    width:40%; 
+    margin:0 32%;
+    cursor:pointer;
+}
+.form-content{
+    align-items: center;
+    z-index: 1000;
+}
+.form_i.b1.act{
+    border-top: 0;
+    border-left: 0;
+    border-bottom-color:rgb(162, 120, 240) ;
+    background-color: rgb(100, 100, 100);
+    border-style: none;
+    border-bottom-style:solid;
+}
+.form_i.b2.act{
+    border-top: 0;
+    border-left: 0;
+    border-bottom-color:rgb(162, 120, 240) ;
+    background-color: rgb(182, 158, 221);
+    border-style: none;
+    border-bottom-style:solid;
+}
+.form_i.b3.act{
+    border-top: 0;
+    border-left: 0;
+    border-bottom-color:rgb(162, 120, 240) ;
+    background-color: rgb(182, 158, 221);
+    border-style: none;
+    border-bottom-style:solid;
+}
+.contact h1{
+    margin-bottom: 1rem;
+}
+@media (max-width:565px){
+    .form-container{
+        display:flex;
+        padding:1rem;
+        align-items: center;
+    }
+    label{
+        margin:auto;
+    }
+    #msg{
+        margin:auto;
+    }
+    input{
+        width:120%;
+        margin-left:auto;
+    }
+    textarea{
+        width:120%;
+        margin-left: auto;
+    }
+    .form-content{
+        /* padding:10%; */
+        z-index: 1000;
+    }
+    .form.name{
+        padding-top:1rem;
+    }
+    .form{
+        padding:10%;
+    }
+    #btn{
+        margin-top: -1px;
+        margin-bottom: 1rem;
+        width: fit-content;
+        align-self: center;
+        /* margin: auto; */
+    }
+    
+}
+@media (min-width:565px){
+    #msg{
+        position: relative;
+        bottom:2rem;
+    }
+}
+#btn{
+    color: black;
+    box-shadow: 0.4px 0.1px 0.4px rgba(95, 95, 95, 0.699);
+}
+.form_i:focus{
+    outline: none;
+}
